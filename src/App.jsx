@@ -20,7 +20,7 @@ function App() {
               <label htmlFor="amount">Mortgage Amount</label>
               <div className="amount_input_wrapper">
                 <span>£</span>
-                <input type="text" name="" id="" />
+                <input type="text" name="amount" required />
               </div>
             </div>
 
@@ -28,7 +28,7 @@ function App() {
               <div className="term_wrapper">
                 <label htmlFor="term">Mortgage Term</label>
                 <div className="input_wrapper">
-                  <input type="text" name="term" id="term" />
+                  <input type="number" name="term" required />
                   <span>years</span>
                 </div>
               </div>
@@ -36,7 +36,7 @@ function App() {
               <div className="interest_wrapper">
                 <label htmlFor="interest">Interest Rate</label>
                 <div className="input_wrapper">
-                  <input type="text" name="interest" id="interest" />
+                  <input type="number" name="interest" required />
                   <span>%</span>
                 </div>
               </div>
@@ -45,11 +45,11 @@ function App() {
             <div className="mortgage_type_wrapper">
               <p>Mortgage Type</p>
               <label className="type_label">
-                <input type="radio" name="mortgage_type" />
+                <input type="radio" name="mortgage_type" required />
                 <span>Repayment</span>
               </label>
               <label className="type_label">
-                <input type="radio" name="mortgage_type" />
+                <input type="radio" name="mortgage_type" required />
                 <span>Interest Only</span>
               </label>
             </div>
