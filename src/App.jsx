@@ -11,51 +11,52 @@ function App() {
       <main>
         <section className="calculator_main">
           <header>
-            <h2>Mortgage Calculator</h2>
+            <h1>Mortgage Calculator</h1>
             <button>Clear All</button>
           </header>
 
           <form action="#">
             <div className="amount_wrapper">
-              <label htmlFor="amount">Morgage Amount</label>
-              <div className="input_wrapper">
+              <label htmlFor="amount">Mortgage Amount</label>
+              <div className="amount_input_wrapper">
                 <span>£</span>
                 <input type="text" name="" id="" />
               </div>
             </div>
 
             <div className="mortgage_info_wrapper">
-              <div className="amount_wrapper">
-                <label htmlFor="amount">Morgage Amount</label>
+              <div className="term_wrapper">
+                <label htmlFor="term">Mortgage Term</label>
                 <div className="input_wrapper">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="term" id="term" />
                   <span>years</span>
                 </div>
               </div>
 
-              <div className="amount_wrapper">
-                <label htmlFor="amount">Morgage Amount</label>
+              <div className="interest_wrapper">
+                <label htmlFor="interest">Interest Rate</label>
                 <div className="input_wrapper">
-                  <input type="text" name="" id="" />
+                  <input type="text" name="interest" id="interest" />
                   <span>%</span>
                 </div>
               </div>
             </div>
 
             <div className="mortgage_type_wrapper">
-              <button>
+              <p>Mortgage Type</p>
+              <label className="type_label">
                 <input type="radio" name="mortgage_type" />
-                Repayment
-              </button>
-              <button>
+                <span>Repayment</span>
+              </label>
+              <label className="type_label">
                 <input type="radio" name="mortgage_type" />
-                Interest Only
-              </button>
+                <span>Interest Only</span>
+              </label>
             </div>
 
-            <button>
+            <button className="submit_btn">
               <img src={icon_calculator} alt="Icon Calculator" />
-              Calculate Repayment
+              Calculate Repayments
             </button>
           </form>
         </section>
