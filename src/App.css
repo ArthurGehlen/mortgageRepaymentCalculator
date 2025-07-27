@@ -58,6 +58,11 @@ main .calculator_main form {
   margin-top: 1.5rem;
 }
 
+/* REMOVING DETAIL OF INPUT */
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
 /* LABEL */
 main .calculator_main form .amount_wrapper label,
 main .calculator_main form .mortgage_info_wrapper label,
