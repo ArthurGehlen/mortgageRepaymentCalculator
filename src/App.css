@@ -17,7 +17,7 @@ body {
 main {
   background-color: hsl(0, 0%, 100%);
   height: 36rem;
-  max-width: 70rem;
+  max-width: 65rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +27,8 @@ main {
 main .calculator_main {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  gap: 1.2rem;
+  padding: 2rem 1.75rem;
   flex: 1 1;
 }
 
@@ -55,7 +56,10 @@ main .calculator_main header button:hover {
 }
 
 main .calculator_main form {
-  margin-top: 1.5rem;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* REMOVING DETAIL OF INPUT */
@@ -74,7 +78,7 @@ main .calculator_main form .mortgage_type_wrapper p {
 /* INPUT WRAPPER */
 .amount_input_wrapper,
 .input_wrapper {
-  margin-top: 0.6rem;
+  margin-top: 0.4rem;
   width: 100%;
   height: 3rem;
   display: flex;
@@ -172,7 +176,7 @@ main .calculator_main form .amount_wrapper .amount_input_wrapper input {
 
 /* MORTGAGE INFO WRAPPER */
 main .calculator_main form .mortgage_info_wrapper {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -203,13 +207,13 @@ main .calculator_main form .mortgage_info_wrapper .interest_wrapper input {
 
 /* MORTGAGE TYPE WRAPPER */
 .mortgage_type_wrapper {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 .mortgage_type_wrapper .type_label {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   border: 1px solid hsl(200, 24%, 40%);
   padding: 0.8rem;
   border-radius: 0.4rem;
@@ -238,7 +242,7 @@ main .calculator_main form .mortgage_info_wrapper .interest_wrapper input {
 
 .submit_btn {
   width: 20rem;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   padding: 0.8rem;
   display: flex;
   align-items: center;
@@ -262,14 +266,14 @@ main .calculator_main form .mortgage_info_wrapper .interest_wrapper input {
 main .infos_main {
   flex: 1 1;
   width: 50%;
-  background-color: hsl(202, 55%, 16%);
+  background-color: hsla(202, 55%, 16%);
   border-radius: 0 1rem 1rem 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 0.75rem;
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 
 main .infos_main h1 {
@@ -280,6 +284,79 @@ main .infos_main p {
   text-align: center;
   width: 80%;
   color: hsl(200, 26%, 54%);
+}
+
+main .infos_main .results_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .infos_main .results_container h2 {
+  color: #fff;
+}
+
+main .infos_main .results_container p {
+  width: 90%;
+  text-align: start;
+}
+
+main .infos_main .results_container .results_shown {
+  background-color: hsl(200, 77%, 7%);
+  height: 14rem;
+  border-radius: .4rem;
+  padding: 2rem;
+  position: relative;
+}
+
+main .infos_main .results_container .results_shown .separator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: .4rem;
+  width: 100%;
+  background-color: hsl(61, 70%, 52%);
+  border-radius: .4rem .4rem 0 0;
+}
+
+main .infos_main .results_container .results_shown h1 {
+  color: hsl(61, 70%, 52%);
+  font-size: 3rem;
+}
+
+main .infos_main .results_container .results_shown hr {
+  margin: 2rem 0;
+}
+
+main .infos_main .results_container .results_shown h2 {
+  font-size: 1.4rem;
+  padding: .8rem 0;
+}
+
+/* HANDLING ERRORS */
+.input_error input, 
+.input_error span {
+  border-color: hsl(4, 69%, 50%) !important;
+}
+
+.input_error span {
+  background-color: hsl(4, 69%, 50%) !important;
+  color: #fff !important;
+}
+
+.amount_input_wrapper,
+.input_wrapper,
+.mortgage_type_wrapper {
+  position: relative;
+}
+
+.error_message {
+  font-size: .875rem;
+  margin-top: .4rem;
+  color: hsl(4, 69%, 50%) !important;
+  /* position: absolute; */
+  /* bottom: -30px; */
 }
 
 @media screen and (max-width: 428px) {
